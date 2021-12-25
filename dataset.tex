@@ -1,0 +1,116 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+]{article}
+\usepackage{amsmath,amssymb}
+\usepackage{lmodern}
+\usepackage{ifxetex,ifluatex}
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\hypersetup{
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+\urlstyle{same} % disable monospaced font for URLs
+\usepackage[margin=1in]{geometry}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\ifluatex
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+
+\author{}
+\date{\vspace{-2.5em}}
+
+\begin{document}
+
+\begin{verbatim}
+* NTC: El código de identificaicón único que se le da a cada estudio clínico al registrarse en ClinicalTials.goc. El formato del código está       constituido por "NTC" seguido de un número de 8 dígitos. Ejemplo: NCT00000419.
+
+* Número Título: El título oficial de un protocolo utilizado para identificar un estudio clínico o un título breve escrito en un lenguaje          destinado al público no especializado.
+
+* Estado: Indica el estado de contratación actual o el estado de acceso ampliado.
+
+* Resultado del estudio: Un registro del estudio que incluye los resultados resumidos publicados en la base de datos de ClinicalTrials.gov.       La información resumida de los resultados incluye el flujo de participantes, las características iniciales, las medidas de resutado y los        eventos adversos.
+
+* Condiciones:La enfermedad, trastorno, síndrome, enfermedad o lesión que se está estudiando.
+
+* Intervenciones: Un proceso o acción que es el foco de un estudio clínico. Las intervenciones incluyen medicamentos, dispositivos médicos,        procedimientos, vacunas y otros productos que están en investigación o que ya están disponible. Las Intervenciones también pueden incluir        enfoques no invasivos como la educación o la modificación de la dieta y el ejercicio.
+
+* Patrocinador / Colaborador: Una organización distinta del patrocinador que brinda apoyo para un estudio clínico. Este apoyo puede incluir        actividades relacionadas con la financiación, el diseño, la implementación, el análisis de datos o la presentación de informes.
+
+* Sexo: Un tipo de criterio de elegibilidad que indica el sexo de las personas que pueden participar en un estudio clínico (todos, mujeres,        hombres). El sexo es la clasificación de una persona como hombre o mujer basada en distinciones biológicas. El sexo es distinto de la            elegibilidad basasa en el género.
+
+* Edad: Tipo de criterio de elegibilidad que indica la edad que debe tener una persona para participar en un estudio clínico. Esto puede           estar indicado por una edad específica o los siguientes grupos de edad:
+  1.Niño (nacimiento - 17)
+  2.Adulto (18 - 64)
+  3.Adulto mayor (65 +)
+
+* Fases: La estapa de un ensayo clínico que estudia un medicamento o producto biológico, según las definiciones desarrolladas por la               Administración de Drogas y Alimentos de los EE.UU. (FDA). La fase se basa en el objetivo del estudio, el número de participantes y otras         características. Hay cinco fases: Fase 0 o inicial, Fase 1, Fase 2, Fase 3 y Fase 4. No aplicable se utiliza para describir ensayos sin          fases definidas por la FDA, incluidos los ensayos de dispositivos o intervenciones conductuales.
+
+* Inscripciones: El número de participantes en un estudio clínico. 
+
+* Tipo de financiador: Describe la organización que proporciona financiación o apoyo para un estudio clínico. Este apoyo puede incluir             actividades relacionadas con la financiación, el diseño la implementación, el análisis de datos o la presentación de informes. Las               organizaciones que figuran como patrocinadores y coaboradores de un estudio se consideran financiadores del estudio. ClinicalTrials.gov          cuenta con cuatro tipo de financiadores:
+  1.Intitutos Nacionales de Salud de EE.UU.
+  2.Otras agencias federales de EE.UU. (Administración de Alimentos y Medicamentos, los Centros para el Control y la Prevención de                 Enfermedades o el Departamento de Asuntos de Veteranos de EE.UU)
+  3.Industria (empresas farmacéuticas y de dispositivos)
+  4.Todos los demás (incluidos individuos, universidades y organizaciones comunitarias)
+
+* Tipo de estudio: Describe la naturaleza de un estudio clínico. Los tipo de estudios incluyen los ensayos clínicos, estudios observacionales      y acceso ampliado.
+
+* Fecha de inicio: La fecha real en la que se inscribió al primer participante en un estudio clínico. 
+
+* Fecha de finalización Primaria: La fecha en la que el último particpantes en un estudio clínico fue examinado o recibió una intervención         para recopilar datos finales para la medidad de resultado primaria.  Si el estudio clínico finalizó de acuerdo con el protocolo o se dio         por terminado no afecta esta fecha. Para los estudios clínicos con más de una medida de resultado primaria con diferentes fechas de              finalización, este término se refiere a la fecha en la que se completa la recopilación de datos para todas las medidas de resultado              primarias. 
+
+* Fecha primera publicación: La fecha en la que la información de los resultados resumidos estuvo disponibel por primera vez en                    ClinicalTrials.gov después de que concluyó la revisión del control de calidad (QC) de la Biblioteca Nacional de Medicina (NLM). Por lo           general, hay una demora entre la fecha en que el patrocinador del estudio o el investigador envia por primeera vez la información resumidad       de los resultados y la fecha de publicacion de los resultados. 
+
+* Última actualización publicada: La fecha más reciente en la que se pusieron a disposición los cambios en el registro de un estudio en            ClinicalTrials.gov. Puede haber una demora entre el momento en que el patrocinador o investigador del estudio envió los cambios a                ClinicalTrials.gov y la fecha de publicación de la últimza actualización.
+
+* Localización: Países en los que se encuentran las instalaciones de investigación para un estudio. Un país aparece en la lista solo una vez,      incluso si hay más de una instalación en el país. La lista incluye todos los países a la fecha de la última actualización presentada;            cualquier país para el que se eliminaron todas las instalaciones del registro del estudio que se enumera en países de ubicación eliminados.
+
+* Link URL: Enlace de publicación de los estudios clínicos.
+\end{verbatim}
+
+\end{document}
