@@ -294,7 +294,7 @@ tabItem(
            title = "Descripción de la Predicción",
            status = "secondary",
            solidHeader = TRUE,
-           collapsible = FALSE,
+           collapsible = TRUE,
            collapsed = FALSE,
            closable = FALSE,
            includeMarkdown("mds/prediction.md")
@@ -452,17 +452,20 @@ tabItem(
      gr=data.frame(Newtab1$colnames,Newtab1$colcoord[,1],Newtab1$colcoord[,2],Newtab1$colmass)
      colnames(gr)=c("Mes","Dim1","Dim2","Size")
     
-     fviz_ca_biplot(Newtab1, repel = TRUE, labelsize = 5, pointsize = 2) +
-       scale_y_continuous(limits = c(-1, 1), breaks = seq(0, 1, by = 0.1))+
-       scale_x_continuous(limits = c(-1, 1), breaks = seq(-1, 1, by = 0.1))
+     fviz_ca_biplot(Newtab1, repel = TRUE, labelsize = 5, pointsize = 2,col.row='black') +
+       scale_y_continuous(limits = c(-0.1, 0.1), breaks = seq(-1, 1, by = 0.1))+
+       scale_x_continuous(limits = c(-1, 1), breaks = seq(-1, 1, by = 0.1))+
+       theme_classic()
      
    })
    
    output$int <- renderText({
-     print('Se emplea el método de reduccion de dimensionalidad de aprendizaje no supervisado, mediante el cual se obtuvo que la primera dimensión explica el 99.9% de la variabilidad de los datos
-           ,asimismo puede inferir que el factor "female" se encuentre en su mayoríe presente en los años 2016,2003,2008,2019 explica la variable Enrollment,
-           a su vez en el 2018 es explicado por el factor all ("male" y"female"), sin embargo el factor "male" no explica casi nada a la variabilidad de los datos en ningún año')
-
+     print('
+            
+            Se puede observar que en el presente estudio solo tomando dos variables se obtiene el 99.9% de variabilidad de los datos, la variable de respuesta es Enrollment, 
+            en la gráfica se puede observar el comportamiento de Enrollment en los años 2016, 2003, 2008, 2019 tiene mayor similitud con el género "Female" lo que significa que en dichos años 
+            existe una gran cantidad de individuos con género femenino que se enlistaron, asimismo se puede observar que en el 2018 hubo mayor cantidad de individuos enlistados del género "all" (tanto masculino como femenino), 
+            y finalmente se evidencia que la categoría "male" de la variable género no es explicada en ningun año por lo cual no representa una variabilidad y significancia en la data.')
    })
 
 # PREPARACIÓN DATA PARA EL MAPA
