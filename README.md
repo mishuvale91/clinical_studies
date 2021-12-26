@@ -4,7 +4,7 @@ Este es un repositorio que contiene el código de una aplicación en RStudio+Shi
 ## Ejecutar localmente
 * Clona este repositorio en tu computadora.
 * Asegúrese de tener todos los paquetes incluidos en helpers.R instalados en su máquina.
-* Ejecute el archivo app.R y disfrute de Shiny!
+* Ejecute el archivo app.R
 * Versión shinyapps.io
 
 ## Sitio 
