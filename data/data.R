@@ -153,7 +153,7 @@ data_clean1 <- data_clean1 %>%
 
 #  CONTIENTE Y PAÍS
 # ============================AMERICA===========================================
-
+#  CREACIÓN CONTINENTE
 data_clean2 <- data_clean1 %>% 
                  mutate(Locations=trimws(Locations)) %>% 
                  mutate(north_america=ifelse(grepl("canada",Locations)==T | grepl("alberta",Locations)==T | grepl("british columbia",Locations)==T |
@@ -180,7 +180,7 @@ data_clean2 <- data_clean1 %>%
                                              grepl("washington",Locations)==T | grepl("west virginia",Locations)==T | grepl("wisconsin",Locations)==T |
                                              grepl("wyoming",Locations)==T,"North America",NA))
   
-  
+#  CREACIÓN PAÍS
 data_clean2 <- data_clean2 %>% 
                  mutate(pais_norta=ifelse(grepl("canada",Locations)==T,"Canada",
                                    ifelse(grepl("new brunswick",Locations)==T,"New Brunswick",
@@ -560,4 +560,3 @@ relaciones <- data_clean2 %>%
                      pais_europe,
                      pacifica,
                      pais_pacifica)
-
